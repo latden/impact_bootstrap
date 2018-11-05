@@ -1,0 +1,93 @@
+// Styles for challenge timeline
+
+.field--name-field-challengesteps {
+    margin: 2rem 0;
+    overflow-y: hidden;
+
+    @include desktop {
+        &::after {
+            display: block;
+            content: '';
+            width: 3rem;
+            height: 8px;
+            background: #AAAAAA;
+            position: absolute;
+            bottom: 2rem;
+            transform: translateX(0.73rem);
+        }
+    }
+
+    .timeline-event {
+        display: block;
+        position: relative;
+        padding: 1rem 0rem;
+
+        @include desktop { padding: 2rem 4rem; }
+
+        @include desktop {
+            &::before {
+                display: block;
+                content: '';
+                height: 100%;
+                width: 10px;
+                background: #AAAAAA;
+                position: absolute;
+                top:0;
+                left:1em;
+                transform: translateY(4rem);
+            }
+
+            &::after {
+                display: block;
+                content: '';
+                height: 2.5rem;
+                width: 2.5rem;
+                position: absolute;
+                top:4.5rem;
+                left:1em;
+                border-radius: 50%;
+                border: #FFF 3px solid;
+                transform: translateY(-50%) translateX(-0.73rem);
+                background: #7c7c7c;
+            }
+
+            &.completed::after, &.completed::before { background: #4293ae; }
+        }
+
+        &.completed .timeline--event-name { color: #3f94a9; }
+
+        .timeline--event-name {
+            font-weight: 500;
+            color: #7c7c7c;
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size:1.4em;
+        }
+
+        .timeline--event-date {
+            color: #000;
+            font-weight: 700;
+            font-size: 0.95em;
+            padding: 0rem 1.25rem 0.25rem 1.25rem;
+            margin-top: 0.25em;
+        }
+
+        .timeline--description {
+            padding: 0.75rem 1.25rem 0 1.25rem;
+            font-size: 1em;
+            line-height: 2.25rem;
+            color: #202020;
+            margin-top: 0.25em;
+
+            p { margin-bottom: 1.25em; }
+        }
+
+        .timeline--event--container {
+            padding: 0 0.5rem;
+            position: relative;
+        }
+    }
+
+    .timeline-event:first-child::before {transform: translateY(4rem);}
+
+}

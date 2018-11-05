@@ -1,0 +1,20 @@
+// Import commonly used functions
+@import 'mixins';
+
+// Import variables used globally and component based
+@import 'settings';
+
+// Import global styles
+@import 'globalStyles';
+
+// Import components
+@import 'components/challengeNav';
+@import 'components/challengePages';
+@import 'components/challengeStages';
+@import 'components/challengeListing';
+
+// Import layout styles
+@import 'layouts/challengePagesLayout';
+@import 'layouts/homePageLayout';
+@import 'layouts/globalLayouts';
+

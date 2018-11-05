@@ -1,0 +1,67 @@
+.challengeNav--container {
+  border-bottom: #EDEDED 3px solid;
+}
+
+.challenge-nav {
+  list-style    : none;
+  padding-left  : 0;
+  margin-bottom : 0rem;
+  margin-left   : -5px;
+
+  a {
+    color           : #000;
+    display         : inline-block;
+    font-size       : 0.95em;
+    font-weight     : 600;
+    padding         : 0.5em 0.1em 0.5em 0.1em !important;
+    position        : relative;
+    text-decoration : none;
+
+    @include tablet { padding: 1em 0.1em 1.2em 0.1em !important; }
+  }
+
+  & > li {
+    display   : block;
+    padding   : 0;
+    margin    : 0;
+
+    &:first-child { margin-left: 0; }
+
+    @include tablet { display: inline-block; margin: 0 2em; }
+  }
+
+  .active {
+
+    // CSS Mechanism to get the active states to show properly
+    // Applies to pages that are not of type challenge
+    body:not(.page-node-type-challenge) & {
+
+      a:after {
+        background  : #007897;
+        bottom      : 0.5em;
+        content     : '';
+        display     : block;
+        height      : 5px;
+        position    : absolute;
+        width       : 100%;
+
+        @include tablet { bottom: 1.1em; }
+      }
+
+      &.expanded a:after{ height: 0px; }
+    }
+
+    // Override for pages that are of type challenge
+    body.page-node-type-challenge & a:after {
+      background  : #007897;
+      bottom      : 0.5em;
+      content     : '';
+      display     : block;
+      height      : 5px;
+      position    : absolute;
+      width       : 100%;
+
+      @include tablet { bottom: 1.1em; }
+    }
+  }
+}
