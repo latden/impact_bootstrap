@@ -7,9 +7,13 @@
  * Place your custom PHP code in this file.
  */
 
-function impact_bootstrap_form_alter(&$form, $form_state, $form_id) {
 
+function impact_bootstrap_preprocess_page(&$variables) {
+  $variables['images_path'] = \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
+}
+
+function impact_bootstrap_form_alter(&$form, $form_state, $form_id) {
   if ( $form['#form_id'] == 'user_login_form' ) {
-	$form['#suffix'] = '<br/><a href="/user/password/">Forgot your password?</a>';
+    $form['#suffix'] = '<br/><a href="/user/password/">Forgot your password?</a>';
   }
 }

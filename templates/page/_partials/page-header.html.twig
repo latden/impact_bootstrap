@@ -8,7 +8,59 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
       ]
     %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+    <header role="banner">
+      <ul id="wb-tphp" class="wb-init wb-disable-inited">
+        <li class="wb-slc">
+          <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+        </li>
+        <li class="wb-slc visible-sm visible-md visible-lg">
+          <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+        </li>
+        <li class="wb-slc">
+          <a class="wb-sl" href="#wb-lng">Skip to Language Toggle</a>
+        </li>
+        <li class="wb-slc">
+          <a class="wb-sl" href="#challenges">Skip to Current Challenges</a>
+        </li>
+        <li class="wb-slc">
+          <a class="wb-sl" href="#nonChallenges">Skip to Other Initiatives</a>
+        </li>
+        <li class="wb-slc">
+          <a class="wb-sl" rel="alternate" href="?wbdisable=true">Switch to basic HTML version</a>
+        </li>
+      </ul>
+      <nav role="navigation" class="pre-nav">
+        <div class="container">
+          <section class="pre-nav__items">
+            <a href="https://canada.ca" target="_blank" tabindex="0"><img class="back-to-canada" src="{{ images_path  ~ 'GoC-fip-en.svg' }}" alt="Government of Canada logo"></a>
+            <a id="wb-lng" hreflang="fr" href="#!" lang="fr"><span class="sr-only">Toggle language</span>Français</a>
+          </section>
+        </div>
+      </nav>
+    </header>
+
+    <nav role="navigation" class="navigation-bar">
+      <div class="container">
+        <section class="navigation__items">
+          <div class="branding">
+            <a href="./" class="to-the-homepage">
+              <img class="logo" src="{{ images_path  ~ 'logo-header.svg' }}" alt="Impact Canada Home">
+              <span class="sr-only">Impact Canada</span>
+            </a>
+            <a class="mobile-menu-bars visible-xs" id="toggle-menu"><i class="fas fa-bars" aria-hidden=""></i> &nbsp;Menu</a>
+          </div>
+          <div class="menu">
+            <h2 class="sr-only">Topics menu</h2>
+            <a href="./about.html" aria-posinset="1" aria-setsize="4">About</a>
+            <a href="./how-it-works.html" aria-posinset="2" aria-setsize="4">How it works</a>
+            <a href="./news.html" aria-posinset="3" aria-setsize="4">News</a>
+            <a href="./partner-with-us.html" aria-posinset="4" aria-setsize="4">Partner with us</a>
+          </div>
+        </section>
+      </div>
+    </nav>
+    
+    <div>
       <div id="wb-bnr" class="{{ container }}">
         <div class="row">
           {{ page.banner }}
@@ -61,6 +113,6 @@
         </nav>
       {% endif %}
       {{ page.breadcrumb }}
-    </header>
+    </div>
   {% endblock %}
 {% endif %}
