@@ -34,8 +34,10 @@ gulp.task('browserSyncReload', function() {
 gulp.task('sass', function() {
   'use strict';
 
-  gulp.src('sass/style.scss')
-    .pipe(sass({ outputStyle: 'compressed' })
+//  gulp.src('sass/style.scss')
+  gulp.src('sass/custom.scss')
+//    .pipe(sass({ outputStyle: 'compressed' })
+    .pipe(sass({ outputStyle: 'expanded' })
       .on('error', sass.logError))
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream());

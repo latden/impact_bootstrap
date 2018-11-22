@@ -4,3 +4,7 @@ global-styling:
       css/style.css: {}
       css/custom.css: {}
       css/custom_override.css: {}
+  js:
+    js/rellax.min.js: {}
+    js/scrollreveal.min.js: {}
+    js/scripts.js: {}
