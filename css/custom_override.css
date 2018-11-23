@@ -1,3 +1,7 @@
 nav.navigation-bar {
   z-index: 2;
 }
+
+.field--name-field-homepage-header {
+  display: none;
+}

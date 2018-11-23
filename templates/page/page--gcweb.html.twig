@@ -96,6 +96,15 @@
       {% endblock %}
     {% endif %}
 
+    {% if is_front %}
+      {% include 'block--tmp-jumbotron.html.twig' %}
+      {#
+      {% include 'block--tmp-challenges.html.twig' %}
+      {% include 'block--tmp-other-initiatives.html.twig' %}
+      {% include 'block--tmp-cta.html.twig' %}
+      #}
+    {% endif %}
+
     {% block content %}
       <a id="main-content"></a>
       {{ page.content }}

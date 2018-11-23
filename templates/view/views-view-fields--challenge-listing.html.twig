@@ -33,6 +33,7 @@
 #}
 
 
+{#
     <div class="challenge-item hght-inhrt">
         <a href="/{{ language }}/{{ 'challenges'|t }}/{{ fields.field_friendly_url.content }}">
         <div class="title" style="background-image:url({{fields.field_challenge_image.content | striptags}})"><p>{{fields.title.content}}</p></div>
@@ -42,5 +43,20 @@
         </div>
         </a>
     </div>
+#}
 
-
+<a href="./challenge.html">
+    <div class="card">
+        <div class="img-holder">
+            <img src="{{fields.field_challenge_image.content | striptags}}" alt="" class="img-responsive" />
+        </div>
+        <div class="card-body">
+            <div class="sts sts-open">Open challenge</div>
+            <div class="blt blt-teal"></div>
+            <div>
+                <p>{{fields.field_challenge_department.content}}</p>
+                <h3>{{fields.field_single_line_teaser.content}}</h3>
+            </div>
+        </div>
+    </div>
+</a>
