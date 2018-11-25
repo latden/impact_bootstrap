@@ -5,3 +5,7 @@ nav.navigation-bar {
 .field--name-field-homepage-header {
   display: none;
 }
+
+#wb-info nav {
+  padding: 0;
+}
