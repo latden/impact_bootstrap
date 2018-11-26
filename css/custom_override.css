@@ -2,6 +2,18 @@ nav.navigation-bar {
   z-index: 2;
 }
 
+nav.navigation-bar .navigation__items .menu li {
+  display: flex;
+  padding: 0;
+}
+
+nav.navigation-bar .navigation__items .menu a {
+  padding: 0;
+}
+
+nav.navigation-bar .navigation__items .menu a:hover {
+  background-color: inherit;
+}
 .field--name-field-homepage-header {
   display: none;
 }

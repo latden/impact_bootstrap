@@ -23,26 +23,10 @@
       </nav>
     </header>
 
-    <nav role="navigation" class="navigation-bar">
-      <div class="container">
-        <section class="navigation__items">
-          <div class="branding">
-            <a href="./" class="to-the-homepage">
-              <img class="logo" src="{{ images_path  ~ 'logo-header.svg' }}" alt="Impact Canada Home">
-              <span class="sr-only">Impact Canada</span>
-            </a>
-            <a class="mobile-menu-bars visible-xs" id="toggle-menu"><i class="fas fa-bars" aria-hidden=""></i> &nbsp;Menu</a>
-          </div>
-          <div class="menu">
-            <h2 class="sr-only">Topics menu</h2>
-            <a href="./about.html" aria-posinset="1" aria-setsize="4">About</a>
-            <a href="./how-it-works.html" aria-posinset="2" aria-setsize="4">How it works</a>
-            <a href="./news.html" aria-posinset="3" aria-setsize="4">News</a>
-            <a href="./partner-with-us.html" aria-posinset="4" aria-setsize="4">Partner with us</a>
-          </div>
-        </section>
-      </div>
-    </nav>
+    {# Navigation #}
+    {% block navigation %}
+      {{ page.navigation }}
+    {% endblock %}
 
   {% endblock %}
 {% endif %}

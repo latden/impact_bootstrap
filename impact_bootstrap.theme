@@ -8,6 +8,11 @@
  */
 
 
+function impact_bootstrap_preprocess_block(&$variables) {
+  global $base_url;
+  $variables['images_path'] = $base_url . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
+}
+
 function impact_bootstrap_preprocess_page(&$variables) {
   global $base_url;
   $variables['images_path'] = $base_url . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
