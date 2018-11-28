@@ -21,3 +21,7 @@ nav.navigation-bar .navigation__items .menu a:hover {
 #wb-info nav {
   padding: 0;
 }
+
+footer nav a, footer nav h3 {
+  white-space: nowrap;
+}

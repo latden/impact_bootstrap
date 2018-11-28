@@ -18,6 +18,11 @@ function impact_bootstrap_preprocess_page(&$variables) {
   $variables['images_path'] = $base_url . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
 }
 
+function impact_bootstrap_preprocess_region(&$variables) {
+  global $base_url;
+  $variables['images_path'] = $base_url . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
+}
+
 function impact_bootstrap_form_alter(&$form, $form_state, $form_id) {
   if ( $form['#form_id'] == 'user_login_form' ) {
     $form['#suffix'] = '<br/><a href="/user/password/">Forgot your password?</a>';

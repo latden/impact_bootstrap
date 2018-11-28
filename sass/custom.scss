@@ -28,6 +28,18 @@ $space-lg: $space-unit * 2;
 $space-xl:$space-unit * 3.25;
 $space-xxl: $space-unit * 5.25;
 
+// Added by DS
+
+@import 'mixins';
+@import 'settings';
+@import 'globalStyles';
+@import 'components/challengeNav';
+@import 'components/challengePages';
+@import 'components/challengeStages';
+@import 'components/challengeListing';
+@import 'layouts/challengePagesLayout';
+//@import 'layouts/homePageLayout';
+//@import 'layouts/globalLayouts';
 
 
 // ======== Import Google Fonts =======
