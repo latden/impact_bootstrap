@@ -940,7 +940,7 @@ p.lead {
   text-decoration: none;
 }
 
-nav.navigation-bar {
+.region-navigation {
   position: sticky !important;
   position: -webkit-sticky !important;
   top: 0;

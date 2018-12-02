@@ -57,7 +57,7 @@
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+    <h2{{ title_attributes.addClass('block-title').addClass('hl') }}><span class="blt blt-teal"></span>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
 

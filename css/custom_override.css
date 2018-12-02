@@ -1,3 +1,11 @@
+.block-region-main {
+  background-color: #fff;
+}
+
+h2.hl {
+  font-size: 34px;
+}
+
 nav.navigation-bar {
   z-index: 2;
 }
@@ -20,6 +28,32 @@ nav.navigation-bar .navigation__items .menu a:hover {
 
 #wb-info nav {
   padding: 0;
+}
+
+#block-impact-languageswitcher h2 {
+  display: none;
+}
+
+#block-impact-languageswitcher ul {
+  margin: 0;
+}
+
+#block-impact-languageswitcher ul li {
+  padding: 0;
+}
+
+main .btn-primary {
+  background-color: #469EE1;
+  border-color: #335075;
+}
+
+.jumbotron h1 {
+  margin-top: 38px;
+  margin-bottom: 30px;
+}
+
+.navbar-nav > li > a {
+  line-height: inherit;
 }
 
 footer nav a, footer nav h3 {

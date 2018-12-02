@@ -21,7 +21,9 @@
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0, menu_name|clean_class) }}
+<div class="row">
+  {{ menus.menu_links(items, attributes, 0, menu_name|clean_class) }}
+</div>
 
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
@@ -31,7 +33,7 @@
     {% endif %}
     {% for item in items %}
       {% if menu_level == 0 and item.is_expanded %}
-        <div class="col-sm-6">
+        <div class="col-xs-12 col-sm-6">
         <h3>{{ item.title }}</h3>
       {% else %}
         <li{{ item.attributes }}>

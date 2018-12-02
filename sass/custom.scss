@@ -211,14 +211,16 @@ p {
 }
 
 // -------- navigation bar --------
-nav.navigation-bar {
+// DS Change
+.region-navigation {
     position: sticky !important;
     position: -webkit-sticky !important;
     top: 0;
     z-index: 1069;
     background-color: $navy-blue;
+}
 
-
+nav.navigation-bar {
     .navigation__items {
         display: flex;
         justify-content: space-between;
