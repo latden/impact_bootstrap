@@ -6,6 +6,9 @@ h2.hl {
   font-size: 34px;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+}
 nav.navigation-bar {
   z-index: 2;
 }
@@ -30,6 +33,10 @@ nav.navigation-bar .navigation__items .menu a:hover {
   padding: 0;
 }
 
+#wb-info a {
+  font-size: inherit;
+}
+
 #block-impact-languageswitcher h2 {
   display: none;
 }
@@ -40,6 +47,10 @@ nav.navigation-bar .navigation__items .menu a:hover {
 
 #block-impact-languageswitcher ul li {
   padding: 0;
+}
+
+#block-footernew {
+  display: block;
 }
 
 main .btn-primary {

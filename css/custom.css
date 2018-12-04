@@ -994,7 +994,7 @@ nav.navigation-bar .navigation__items .menu a {
   transition: all 0.15s ease-out;
 }
 
-nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigation__items .menu a:active, nav.navigation-bar .navigation__items .menu a.active {
+nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigation__items .menu a:active, nav.navigation-bar .navigation__items .menu a.active, nav.navigation-bar .navigation__items .menu a.is-active {
   border-bottom: 0.69rem solid #E25456;
 }
 
@@ -1035,7 +1035,7 @@ nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigat
     font-size: 1.5em;
     font-weight: bold;
   }
-  nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigation__items .menu a:active, nav.navigation-bar .navigation__items .menu a.active {
+  nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigation__items .menu a:active, nav.navigation-bar .navigation__items .menu a.active, nav.navigation-bar .navigation__items .menu a.is-active {
     border-bottom: 0;
     color: #E25456;
   }
@@ -1072,7 +1072,7 @@ nav.challenge-bar .challenge-pills a {
   line-height: 2.5;
 }
 
-nav.challenge-bar .challenge-pills a:active, nav.challenge-bar .challenge-pills a:hover, nav.challenge-bar .challenge-pills a.active {
+nav.challenge-bar .challenge-pills a:active, nav.challenge-bar .challenge-pills a:hover, nav.challenge-bar .challenge-pills a.active, nav.challenge-bar .challenge-pills a.is-active {
   border-bottom: 0.69rem solid #E25456;
 }
 

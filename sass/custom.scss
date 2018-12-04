@@ -266,7 +266,8 @@ nav.navigation-bar {
 
                 &:hover,
                 &:active,
-                &.active {
+                &.active,
+                &.is-active {
                     border-bottom: 0.69rem solid $red;
 
                 }
@@ -314,7 +315,8 @@ nav.navigation-bar {
 
                     &:hover,
                     &:active,
-                    &.active {
+                    &.active,
+                    &.is-active {
                         border-bottom: 0;
                         color: $red;
                     }
@@ -359,7 +361,8 @@ nav.challenge-bar {
 
             &:active,
             &:hover,
-            &.active {
+            &.active,
+            &.is-active {
                 border-bottom: 0.69rem solid $red;
             }
         }
