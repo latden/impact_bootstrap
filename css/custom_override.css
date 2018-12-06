@@ -2,6 +2,10 @@ body {
   background-color: #fff;
 }
 
+body.toolbar-fixed .toolbar-oriented .toolbar-bar {
+  z-index: 10000;
+}
+
 .block-region-main {
   background-color: #fff;
 }
