@@ -54,7 +54,7 @@
     'container',
   ]
 %}
-<section{{ attributes.addClass(classes) }}>
+<section{{ attributes.addClass(classes).setAttribute('id', 'challenges') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('block-title').addClass('hl') }}><span class="blt blt-teal"></span>{{ label }}</h2>
