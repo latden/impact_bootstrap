@@ -599,9 +599,6 @@ nav.challenge-bar {
 
 // -------- page sections --------
 section {
-    &.basic-page--content {
-        max-width: 800px;
-    }
     &#challenges {
         padding-top: $space-xl;
         padding-bottom: $space-xl;
@@ -728,7 +725,9 @@ section {
 
     }
 
-    &#staticContent {
+    &#staticContent,             // This ID is not actually used
+    &.basic-page--content {
+        max-width: 800px;
 
         h2,
         h3 {
