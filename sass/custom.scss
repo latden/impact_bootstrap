@@ -28,19 +28,20 @@ $space-lg: $space-unit * 2;
 $space-xl:$space-unit * 3.25;
 $space-xxl: $space-unit * 5.25;
 
-// Added by DS
-
+// Import commonly used functions
 @import 'mixins';
+
+// Import variables used globally and component based
 @import 'settings';
-//  @import 'globalStyles';
+
+// Import components
 @import 'components/challengeNav';
 @import 'components/challengePages';
 @import 'components/challengeStages';
 @import 'components/challengeListing';
-@import 'layouts/challengePagesLayout';
-//@import 'layouts/homePageLayout';
-//@import 'layouts/globalLayouts';
 
+// Import layout styles
+@import 'layouts/challengePagesLayout';
 
 // ======== Import Google Fonts =======
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300i,400,400i,500,700,900');
