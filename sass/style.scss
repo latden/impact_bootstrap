@@ -28,26 +28,8 @@ $space-lg: $space-unit * 2;
 $space-xl:$space-unit * 3.25;
 $space-xxl: $space-unit * 5.25;
 
-// Import commonly used functions
-@import 'mixins';
-
-// Import variables used globally and component based
-@import 'settings';
-
-// Import components
-@import 'components/challengeNav';
-@import 'components/challengePages';
-@import 'components/challengeStages';
-@import 'components/challengeListing';
-
-// Import layout styles
-@import 'layouts/challengePagesLayout';
-
 // ======== Import Google Fonts =======
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300i,400,400i,500,700,900');
-
-// ======== Import other sass files =======
-@import "custom-buttons";
 
 // ======== General body styling =======
 html {
@@ -55,7 +37,16 @@ html {
 }
 
 body {
+    background-color: #fff;
     min-height: 1000px;
+    &.page-node-type-page main {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &.toolbar-fixed .toolbar-oriented .toolbar-bar {
+        z-index: 10000;
+    }
 }
 
 .container.narrow {
@@ -95,6 +86,10 @@ h1 {
     }
 }
 
+h2.hl {
+  font-size: 34px;
+}
+
 body.wb-modal > #wb-tphp {
     z-index: 1070 !important;
 }
@@ -102,6 +97,10 @@ body.wb-modal > #wb-tphp {
 main {
     padding: 0;
     padding: 0;
+    .btn-primary {
+        background-color: #469EE1;
+        border-color: #335075;
+    }
 }
 
 .wb-eqht {
@@ -212,7 +211,6 @@ p {
 }
 
 // -------- navigation bar --------
-// DS Change
 .region-navigation {
     position: sticky !important;
     position: -webkit-sticky !important;
@@ -221,7 +219,12 @@ p {
     background-color: $navy-blue;
 }
 
+.navbar-nav > li > a {
+  line-height: inherit;
+}
+
 nav.navigation-bar {
+    z-index: 2;
     .navigation__items {
         display: flex;
         justify-content: space-between;
@@ -253,7 +256,11 @@ nav.navigation-bar {
 
         .menu {
             display: flex;
-            justify-content: space-between;
+
+            li {
+                display: flex;
+                padding: 0;
+            }
 
             a {
                 color: #fff;
@@ -262,6 +269,7 @@ nav.navigation-bar {
                 align-items: center;
                 margin-left: 2em;
                 margin-top: 1rem;
+                padding: 0;
                 border-bottom: 0.69rem solid transparent;
                 transition: all 0.15s ease-out;
 
@@ -270,7 +278,7 @@ nav.navigation-bar {
                 &.active,
                 &.is-active {
                     border-bottom: 0.69rem solid $red;
-
+                    background-color: inherit;
                 }
             }
 
@@ -410,6 +418,8 @@ nav.challenge-bar {
     h1 {
         border-bottom: 0 !important;
         font-size: $space-xl;
+        margin-top: 38px;
+        margin-bottom: 30px;
     }
 
     @media(max-width:767px) {
@@ -589,6 +599,9 @@ nav.challenge-bar {
 
 // -------- page sections --------
 section {
+    &.basic-page--content {
+        max-width: 800px;
+    }
     &#challenges {
         padding-top: $space-xl;
         padding-bottom: $space-xl;
@@ -894,8 +907,40 @@ section {
 
 }
 
+// -------- page specials --------
 
-//color combos
+.field--name-field-homepage-header {
+    display: none;
+}
+
+#wb-info {
+    nav {
+        padding: 0;
+    }
+    a {
+        font-size: inherit;
+    }
+}
+
+#block-impact-languageswitcher {
+    h2 {
+        display: none;
+    }
+
+     ul {
+        margin: 0;
+    }
+
+    ul li {
+        padding: 0;
+    }
+}
+
+#block-impact-bootstrap-footer {
+    display: block;
+}
+
+// -------- color combos --------
 
 .cta {
     @extend %cta__shared;
@@ -1307,6 +1352,7 @@ footer nav {
     h3 {
         margin-bottom: $space-md;
         color: #fff;
+        white-space: nowrap;
     }
 
     ul {
@@ -1318,6 +1364,7 @@ footer nav {
     a {
         color: #fff !important;
         text-decoration: none !important;
+        white-space: nowrap;
 
         &:hover {
             color: $blue !important;
