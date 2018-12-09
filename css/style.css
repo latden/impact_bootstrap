@@ -184,6 +184,10 @@ p.lead {
   line-height: inherit;
 }
 
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: inherit;
+}
+
 nav.navigation-bar {
   z-index: 2;
 }

@@ -220,7 +220,11 @@ p {
 }
 
 .navbar-nav > li > a {
-  line-height: inherit;
+    line-height: inherit;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: inherit;
 }
 
 nav.navigation-bar {
