@@ -96,10 +96,6 @@
       {% endblock %}
     {% endif %}
 
-    {% if is_front %}
-      {% include 'block--tmp-jumbotron.html.twig' %}
-    {% endif %}
-
     {% block content %}
       <a id="main-content"></a>
       {{ page.content }}
