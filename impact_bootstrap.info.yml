@@ -18,6 +18,7 @@ regions:
   content: 'Content'
   content_footer: 'Content Footer'
   footer: 'Footer'
+  footer_right: 'Footer Right'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 

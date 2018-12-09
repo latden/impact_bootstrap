@@ -1305,6 +1305,10 @@ footer nav {
         overflow: hidden;
         position: relative;
 
+        .contextual-region {
+            position: static;
+        }
+
         %circle-shared {
             display: block;
             position: absolute;
