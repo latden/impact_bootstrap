@@ -1209,6 +1209,10 @@ footer nav .footer__right {
   position: relative;
 }
 
+footer nav .footer__right .contextual-region {
+  position: static;
+}
+
 footer nav .footer__right .circle {
   display: block;
   position: absolute;
