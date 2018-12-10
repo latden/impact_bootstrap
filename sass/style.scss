@@ -31,6 +31,9 @@ $space-xxl: $space-unit * 5.25;
 // ======== Import Google Fonts =======
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300i,400,400i,500,700,900');
 
+// ======== Import other sass files =======
+@import "custom-buttons";
+
 // ======== General body styling =======
 html {
     scroll-behavior: smooth;
@@ -225,6 +228,7 @@ p {
 
 .nav > li > a:focus, .nav > li > a:hover {
     background-color: inherit;
+    outline: none;
 }
 
 nav.navigation-bar {
