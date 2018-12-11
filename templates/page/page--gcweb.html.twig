@@ -99,10 +99,6 @@
     {% block content %}
       <a id="main-content"></a>
       {{ page.content }}
-      {% if is_front %}
-        {% include 'block--tmp-other-initiatives.html.twig' %}
-        {% include 'block--tmp-cta.html.twig' %}
-      {% endif %}
       {{ page.content_footer }}
     {% endblock %}
 
