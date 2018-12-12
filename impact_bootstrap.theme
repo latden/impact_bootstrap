@@ -16,6 +16,18 @@ function impact_bootstrap_preprocess_block(&$variables) {
 function impact_bootstrap_preprocess_page(&$variables) {
   global $base_url;
   $variables['images_path'] = $base_url . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/img/';
+  
+  // The Basic Page has a boolean field to indicate that the content should be rendered in a narrow column.
+  // Set a class to be used in <main> to indicate a narrow column.
+  $variables['narrow_class'] = ''; // Default full-width
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    if ($fldval = $node->get('field_narrow_page')->getValue()) {
+      if (!empty($fldval[0]['value'])) {
+        $variables['narrow_class'] = 'narrow-page';
+      }
+    }
+  }
 }
 
 function impact_bootstrap_preprocess_region(&$variables) {

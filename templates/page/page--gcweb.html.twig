@@ -73,7 +73,8 @@
     {% endblock %}
   {% endif %}
 
-  <main role="main" property="mainContentOfPage" {{ content_attributes.addClass('main-container', 'js-quickedit-main-content') }}>
+  {# narrow_class is a theme variable based on a setting in Basic Page #}
+  <main role="main" property="mainContentOfPage" {{ content_attributes.addClass('main-container', 'js-quickedit-main-content', narrow_class) }}>
 
     {# Header #}
     {% if page.header %}

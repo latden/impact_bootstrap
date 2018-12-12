@@ -123,12 +123,6 @@ body {
   min-height: 1000px;
 }
 
-body.page-node-type-page main {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 body.toolbar-fixed .toolbar-oriented .toolbar-bar {
   z-index: 10000;
 }
@@ -775,10 +769,6 @@ section#ctaBox .cta__dark p {
   color: #469EE1 !important;
 }
 
-section#staticContent, section.basic-page--content {
-  max-width: 800px;
-}
-
 section#staticContent h2,
 section#staticContent h3, section.basic-page--content h2,
 section.basic-page--content h3 {
@@ -952,6 +942,14 @@ section#challenge-details .challenge-details__box a {
   section#challenge-details {
     padding: 1.25em 0;
   }
+}
+
+main.narrow-page .region-header,
+main.narrow-page .region-content,
+main.narrow-page .basic-page--content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .field--name-field-homepage-header {

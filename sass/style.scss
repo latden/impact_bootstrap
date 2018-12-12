@@ -42,11 +42,6 @@ html {
 body {
     background-color: #fff;
     min-height: 1000px;
-    &.page-node-type-page main {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
     &.toolbar-fixed .toolbar-oriented .toolbar-bar {
         z-index: 10000;
     }
@@ -735,8 +730,6 @@ section {
 
     &#staticContent,             // This ID is not actually used
     &.basic-page--content {
-        max-width: 800px;
-
         h2,
         h3 {
             margin-bottom: $space-sm;
@@ -915,6 +908,16 @@ section {
 }
 
 // -------- page specials --------
+
+main.narrow-page {
+    .region-header,
+    .region-content,
+    .basic-page--content {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 .field--name-field-homepage-header {
     display: none;
