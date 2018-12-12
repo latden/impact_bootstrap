@@ -22,9 +22,13 @@ function impact_bootstrap_preprocess_page(&$variables) {
   $variables['narrow_class'] = ''; // Default full-width
   if (isset($variables['node'])) {
     $node = $variables['node'];
-    if ($fldval = $node->get('field_narrow_page')->getValue()) {
-      if (!empty($fldval[0]['value'])) {
-        $variables['narrow_class'] = 'narrow-page';
+    if ($node->hasField('field_narrow_page')) {
+      if ($fld = $node->get('field_narrow_page')) {
+        if ($fldval = $fld->getValue()) {
+          if (!empty($fldval[0]['value'])) {
+            $variables['narrow_class'] = 'narrow-page';
+          }
+        }
       }
     }
   }
