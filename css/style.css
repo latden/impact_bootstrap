@@ -350,7 +350,6 @@ nav.navigation-bar .navigation__items .menu a {
   margin-top: 1rem;
   padding: 0;
   border-bottom: 0.69rem solid transparent;
-  transition: all 0.15s ease-out;
 }
 
 nav.navigation-bar .navigation__items .menu a:hover, nav.navigation-bar .navigation__items .menu a:active, nav.navigation-bar .navigation__items .menu a.active, nav.navigation-bar .navigation__items .menu a.is-active {
@@ -816,7 +815,8 @@ section#newsContent h2 {
   margin-top: 0;
 }
 
-section#newsContent p.preview {
+section#newsContent p.preview,
+section#newsContent div.preview {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;

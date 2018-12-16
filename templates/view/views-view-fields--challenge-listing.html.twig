@@ -32,14 +32,25 @@
  */
 #}
 
+{%
+set status = fields.field_challenge_status.content|striptags|trim
+%}
 <a href="/{{ language }}/{{ 'challenges'|t }}/{{ fields.field_friendly_url.content|striptags }}">
-    <div class="card">
+    <div class="card {{ 'status-' ~ status }}">
         <div class="img-holder">
             <img src="{{fields.field_challenge_image.content|striptags}}" alt="" class="img-responsive" />
         </div>
         <div class="card-body">
-            <div class="sts sts-open">Open challenge</div>
-            <div class="blt blt-teal"></div>
+            {% if status == 'open' %}
+                <div class="sts sts-open">{{ 'Open challenge'|t }}</div>
+                <div class="blt blt-teal"></div>
+            {% elseif status == 'closed' %}
+                <div class="sts sts-closed">{{ 'Closed challenge'|t }}</div>
+                <div class="blt blt-red"></div>
+            {% elseif status == 'coming' %}
+                <div class="sts sts-coming">{{ 'Coming soon'|t }}</div>
+                <div class="blt blt-navy"></div>
+            {% endif %}
             <div>
                 <p>{{fields.field_challenge_department.content}}</p>
                 <h3>{{fields.title.content}}</h3>

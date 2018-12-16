@@ -274,7 +274,6 @@ nav.navigation-bar {
                 margin-top: 1rem;
                 padding: 0;
                 border-bottom: 0.69rem solid transparent;
-                transition: all 0.15s ease-out;
 
                 &:hover,
                 &:active,
@@ -775,7 +774,8 @@ section {
             margin-top: 0;
         }
 
-        p.preview {
+        p.preview,
+        div.preview {
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 3;

@@ -19,7 +19,8 @@ function impact_bootstrap_preprocess_page(&$variables) {
   
   // The Basic Page has a boolean field to indicate that the content should be rendered in a narrow column.
   // Set a class to be used in <main> to indicate a narrow column.
-  $variables['narrow_class'] = ''; // Default full-width
+  $variables['narrow_class'] = '';     // Default full-width
+  $variables['challenge_status'] = 'status-none'; // Default no status
   if (isset($variables['node'])) {
     $node = $variables['node'];
     if ($node->hasField('field_narrow_page')) {
@@ -27,6 +28,15 @@ function impact_bootstrap_preprocess_page(&$variables) {
         if ($fldval = $fld->getValue()) {
           if (!empty($fldval[0]['value'])) {
             $variables['narrow_class'] = 'narrow-page';
+          }
+        }
+      }
+    }
+    if ($node->hasField('field_challenge_status')) {
+      if ($fld = $node->get('field_challenge_status')) {
+        if ($fldval = $fld->getValue()) {
+          if (!empty($fldval[0]['value'])) {
+            $variables['challenge_status'] = 'status-'.$fldval[0]['value'];
           }
         }
       }
