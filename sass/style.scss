@@ -392,6 +392,10 @@ nav.challenge-bar {
                 text-decoration: none;
                 min-width: 100px;
             }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
     }
@@ -919,6 +923,16 @@ main.narrow-page {
     }
 }
 
+div.region-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    @media (max-width:767px) {
+        align-items: inherit
+    }
+}
+
 .field--name-field-homepage-header {
     display: none;
 }
@@ -1199,6 +1213,7 @@ ul.process li:last-child::after {
     border-radius: 1em;
     box-shadow: $shadow;
     transition: all 0.5s ease;
+    border-bottom: 1px solid #ddd;
 
     h3 {
         padding: 1em;

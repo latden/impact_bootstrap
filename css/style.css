@@ -450,6 +450,9 @@ nav.challenge-bar .challenge-pills a:active, nav.challenge-bar .challenge-pills 
     text-decoration: none;
     min-width: 100px;
   }
+  nav.challenge-bar .challenge-pills::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .jumbotron {
@@ -952,6 +955,19 @@ main.narrow-page .basic-page--content {
   margin-right: auto;
 }
 
+div.region-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+@media (max-width: 767px) {
+  div.region-content {
+    align-items: inherit;
+  }
+}
+
 .field--name-field-homepage-header {
   display: none;
 }
@@ -1211,6 +1227,7 @@ ul.process li:last-child::after {
   border-radius: 1em;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !important;
   transition: all 0.5s ease;
+  border-bottom: 1px solid #ddd;
 }
 
 .prize h3 {
