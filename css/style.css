@@ -957,6 +957,10 @@ main.narrow-page .challenge-page--content {
   margin-right: auto;
 }
 
+.view-news img {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !important;
+}
+
 #user-login-form {
   width: 50%;
   margin: 0 auto;
