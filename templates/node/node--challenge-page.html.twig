@@ -72,20 +72,17 @@
     </div>
   </div>
 
-  <main role="main" property="mainContentOfPage" class="main-container js-quickedit-main-content">
-    <a id="main-content"></a>
-    <div class="region region-content">
+  <div class="region region-content">
+    <div class="container challenge-page--content">
       <section id="staticContent">
-        <div class="container"><!-- narrow vs. full width toggle -->
-            <ol class="breadcrumb">
-                <li><a href="/">{{ 'Homepage'|t }}</a></li>
-                <li><a href="./">Challenge Name</a></li>
-                <li class="active">{{ title }}</li>
-            </ol>
-            
-            {{ content.body.0 }}
-        </div>
+        <ol class="breadcrumb">
+          <li><a href="{{ path('<front>') }}">{{ 'Homepage'|t }}</a></li>
+          <li><a href="./">{{ content.field_parent_challenge.0 }}</a></li>
+          <li class="active">{{ label.0 }}</li>
+        </ol>
+        
+        {{ content.body.0 }}
       </section>
     </div>
-  </main>
+  </div>
 </div>

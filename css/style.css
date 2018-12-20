@@ -184,6 +184,7 @@ main .btn-primary {
 
 .wb-eqht {
   display: inline-block;
+  width: 100%;
 }
 
 .align-vertical {
@@ -949,7 +950,8 @@ section#challenge-details .challenge-details__box a {
 
 main.narrow-page .region-header,
 main.narrow-page .region-content,
-main.narrow-page .basic-page--content {
+main.narrow-page .basic-page--content,
+main.narrow-page .challenge-page--content {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;

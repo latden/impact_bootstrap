@@ -103,6 +103,7 @@ main {
 
 .wb-eqht {
     display: inline-block;
+    width: 100%;
 }
 
 .align-vertical {
@@ -916,7 +917,8 @@ section {
 main.narrow-page {
     .region-header,
     .region-content,
-    .basic-page--content {
+    .basic-page--content,
+    .challenge-page--content {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
