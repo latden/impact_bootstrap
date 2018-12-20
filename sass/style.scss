@@ -923,14 +923,10 @@ main.narrow-page {
     }
 }
 
-div.region-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#user-login-form {
+    width: 50%;
+    margin: 0 auto;
     padding: 2em;
-    @media (max-width:767px) {
-        align-items: inherit
-    }
 }
 
 .field--name-field-homepage-header {
