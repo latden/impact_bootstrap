@@ -887,7 +887,7 @@ section#challengePage a {
 section#challenge-details {
   padding: 3.25em 0;
   background-color: #fff;
-  background-image: url("./img/challenge-details_bg.svg");
+  background-image: url("../img/challenge-details_bg.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
