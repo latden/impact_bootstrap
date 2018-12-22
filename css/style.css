@@ -184,7 +184,6 @@ main .btn-primary {
 
 .wb-eqht {
   display: inline-block;
-  width: 100%;
 }
 
 .align-vertical {
@@ -335,6 +334,7 @@ nav.navigation-bar .navigation__items img.logo {
 
 nav.navigation-bar .navigation__items .menu {
   display: flex;
+  justify-content: space-between;
 }
 
 nav.navigation-bar .navigation__items .menu li {
@@ -803,8 +803,27 @@ section#staticContent a, section.basic-page--content a {
   color: #469EE1;
 }
 
+section#staticContent .breadcrumb, section.basic-page--content .breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+
+section#staticContent .breadcrumb li,
+section#staticContent .breadcrumb a, section.basic-page--content .breadcrumb li,
+section.basic-page--content .breadcrumb a {
+  font-size: 1em;
+}
+
+section#staticContent .breadcrumb a, section.basic-page--content .breadcrumb a {
+  color: #469EE1;
+}
+
 section#newsContent img {
   margin-bottom: 1.25em;
+  object-fit: cover;
+  width: 100%;
+  height: 190px;
 }
 
 section#newsContent p.department {

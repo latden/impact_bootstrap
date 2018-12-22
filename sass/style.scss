@@ -103,7 +103,6 @@ main {
 
 .wb-eqht {
     display: inline-block;
-    width: 100%;
 }
 
 .align-vertical {
@@ -260,6 +259,7 @@ nav.navigation-bar {
 
         .menu {
             display: flex;
+            justify-content: space-between;
 
             li {
                 display: flex;
@@ -760,11 +760,30 @@ section {
         a {
             color: $blue;
         }
+
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+            padding: 8px 0;
+
+            li,
+            a {
+                font-size: 1em;
+            }
+
+            a {
+                color: #469EE1;
+            }
+        }
+
     }
 
     &#newsContent {
         img {
             margin-bottom: $space-md;
+            object-fit: cover;
+            width: 100%;
+            height: 190px;
         }
 
         p.department {
