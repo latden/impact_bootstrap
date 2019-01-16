@@ -1,6 +1,6 @@
 {# Origin: wxt_bootstrap/templates/block/block--system-menu-block--main.html.twig #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass('navigation-bar').removeClass('clearfix')|without('role', 'aria-labelledby') }}>
+<nav role="navigation" {{ attributes.addClass('navigation-bar').removeClass('clearfix')|without('role', 'aria-labelledby') }}>
   <div class="container">
     <section class="navigation__items">
       <div class="branding">

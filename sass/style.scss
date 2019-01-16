@@ -942,10 +942,17 @@ main.narrow-page {
         margin-left: auto;
         margin-right: auto;
     }
+    .container {
+        max-width: 800px;
+    }
 }
 
 .view-news img {
     box-shadow: $shadow;
+}
+
+#wb-auto-1 {
+    width: 100%;
 }
 
 #user-login-form {

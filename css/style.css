@@ -976,8 +976,16 @@ main.narrow-page .challenge-page--content {
   margin-right: auto;
 }
 
+main.narrow-page .container {
+  max-width: 800px;
+}
+
 .view-news img {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !important;
+}
+
+#wb-auto-1 {
+  width: 100%;
 }
 
 #user-login-form {
