@@ -21,7 +21,7 @@
 <section id="newsContent">
     <div class="container">
         <h1 id="wb-content">{{ 'News'|t }}</h1>
-        <div class="row wb-eqht">
+        <div class="row news-cards">
         {% for row in rows %}
             <div {{attributes.addClass(challenge_listing_classes)}}>{{ row.content }}</div>
         {% endfor %}

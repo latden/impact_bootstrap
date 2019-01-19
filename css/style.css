@@ -819,35 +819,38 @@ section#staticContent .breadcrumb a, section.basic-page--content .breadcrumb a {
   color: #469EE1;
 }
 
-section#newsContent img {
+section#newsContent .news-cards a {
+  text-decoration: none;
+}
+
+section#newsContent .news-cards img {
   margin-bottom: 1.25em;
   object-fit: cover;
   width: 100%;
   height: 190px;
 }
 
-section#newsContent p.department {
+section#newsContent .news-cards p.department {
   color: #E25456;
   font-weight: 500;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.75em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-section#newsContent h2 {
+section#newsContent .news-cards h2 {
   margin-bottom: 0.75em;
   color: #1F3169;
   margin-top: 0;
-}
-
-section#newsContent p.preview,
-section#newsContent div.preview {
+  font-size: 1.25em;
+  white-space: nowrap;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
-section#newsContent a {
-  color: #469EE1;
+section#newsContent .news-cards p.small {
+  color: slategray;
   font-weight: 500;
 }
 

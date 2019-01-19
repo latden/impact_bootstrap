@@ -66,11 +66,12 @@
  */
 #}
 
-<div class="col-sm-4 mrgn-bttm-lg">
-    <div style="min-height: 180px">{{ content.field_image }}</div>
-    <p class="department">{{ content.field_challenge_department.0 }}</p>
-    <h2>{{ label.0 }}</h2>
-    <div class="preview">{{ content.body.0 }}</div>
-    <p><span class="label label-default">{{ content.field_published_date.0 }}</span></p> 
-    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">Read more</a>
+<div class="col-sm-6 col-md-3 mrgn-bttm-lg">
+    <a href="{{ content.field_url.0 }}" target="_blank">
+        {{ content.field_image }}
+        <p class="department">{{ content.field_parent_challenge.0 }}</p>
+        <h2>{{ label.0 }}</h2>
+        <div class="preview">{{ content.body.0 }}</div>
+        <p class="small">{{ content.field_published_date.0 }}</p> 
+    </a>
 </div>
