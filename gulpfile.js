@@ -31,7 +31,7 @@ gulp.task('browserSyncReload', function() {
 });
 
 // SASS Compilation
-gulp.task('sass', function() {
+gulp.task('sass', async function() {
   'use strict';
 
   gulp.src('sass/style.scss')
@@ -42,10 +42,10 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('sass:watch', ['sass'], function(){
+gulp.task('sass:watch', gulp.series(['sass']), function(){
   'use strict';
 
-  gulp.watch('sass/**/**.scss', ['sass','drush:cr', 'browserSyncReload']);
+  gulp.watch('sass/**/**.scss', gulp.series(['sass','drush:cr', 'browserSyncReload']));
 });
 
 // Browser Sync
@@ -63,18 +63,18 @@ gulp.task('browser-sync', function(){
 gulp.task('twig:watch', function(){
   'use strict';
 
-  gulp.watch('templates/**/**.html.twig', ['drush:cr', 'browserSyncReload']);
+  gulp.watch('templates/**/**.html.twig', gulp.series(['drush:cr', 'browserSyncReload']));
 });
 
 // Assets Watch
 gulp.task('assets:watch', function(){
   'use strict';
 
-  gulp.watch(['assets/**/**.*'], ['drush:cr','browserSyncReload']);
+  gulp.watch(['assets/**/**.*'], gulp.series(['drush:cr','browserSyncReload']));
 });
 
 // Default Task
-gulp.task('default', ['sass']);
+gulp.task('default', gulp.series('sass'));
 
 // Dev Environment tasks
-gulp.task('dev', ['browser-sync','sass:watch','twig:watch','assets:watch']);
+gulp.task('dev', gulp.series(['browser-sync','sass:watch','twig:watch','assets:watch']));
