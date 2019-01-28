@@ -987,10 +987,6 @@ main.narrow-page .container {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !important;
 }
 
-#wb-auto-1 {
-  width: 100%;
-}
-
 #user-login-form {
   width: 50%;
   margin: 0 auto;
