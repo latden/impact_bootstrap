@@ -42,10 +42,11 @@ gulp.task('sass', async function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('sass:watch', gulp.series(['sass']), function(){
+gulp.task('sass:watch', function(){
   'use strict';
 
-  gulp.watch('sass/**/**.scss', gulp.series(['sass','drush:cr', 'browserSyncReload']));
+  gulp.watch('sass/**/**.scss', gulp.series(['sass','drush:cr']));
+  //gulp.watch('sass/**/**.scss', gulp.series(['sass','drush:cr', 'browserSyncReload']));
 });
 
 // Browser Sync
