@@ -50,6 +50,9 @@ set status = fields.field_challenge_status.content|striptags|trim
             {% elseif status == 'coming' %}
                 <div class="sts sts-coming">{{ 'Coming soon'|t }}</div>
                 <div class="blt blt-navy"></div>
+            {% elseif status == 'in selection' %}
+                <div class="sts sts-selection">{{ 'In selection'|t }}</div>
+                <div class="blt blt-teal"></div>
             {% endif %}
             <div>
                 <p>{{fields.field_challenge_department.content}}</p>
