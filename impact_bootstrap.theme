@@ -23,20 +23,22 @@ function impact_bootstrap_preprocess_page(&$variables) {
   $variables['challenge_status'] = 'status-none'; // Default no status
   if (isset($variables['node'])) {
     $node = $variables['node'];
-    if ($node->hasField('field_narrow_page')) {
-      if ($fld = $node->get('field_narrow_page')) {
-        if ($fldval = $fld->getValue()) {
-          if (!empty($fldval[0]['value'])) {
-            $variables['narrow_class'] = 'narrow-page';
+    if (is_object($node)) {
+      if ($node->hasField('field_narrow_page')) {
+        if ($fld = $node->get('field_narrow_page')) {
+          if ($fldval = $fld->getValue()) {
+            if (!empty($fldval[0]['value'])) {
+              $variables['narrow_class'] = 'narrow-page';
+            }
           }
         }
       }
-    }
-    if ($node->hasField('field_challenge_status')) {
-      if ($fld = $node->get('field_challenge_status')) {
-        if ($fldval = $fld->getValue()) {
-          if (!empty($fldval[0]['value'])) {
-            $variables['challenge_status'] = 'status-'.$fldval[0]['value'];
+      if ($node->hasField('field_challenge_status')) {
+        if ($fld = $node->get('field_challenge_status')) {
+          if ($fldval = $fld->getValue()) {
+            if (!empty($fldval[0]['value'])) {
+              $variables['challenge_status'] = 'status-'.$fldval[0]['value'];
+            }
           }
         }
       }
