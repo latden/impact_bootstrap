@@ -42,10 +42,10 @@ set status = fields.field_challenge_status.content|striptags|trim
         </div>
         <div class="card-body">
             {% if status == 'open' %}
-                <div class="sts sts-open">{{ 'Open challenge'|t }}</div>
+                <div class="sts sts-open">{{ 'Open'|t }}</div>
                 <div class="blt blt-teal"></div>
             {% elseif status == 'closed' %}
-                <div class="sts sts-closed">{{ 'Closed challenge'|t }}</div>
+                <div class="sts sts-closed">{{ 'Closed'|t }}</div>
                 <div class="blt blt-red"></div>
             {% elseif status == 'coming' %}
                 <div class="sts sts-coming">{{ 'Coming soon'|t }}</div>
