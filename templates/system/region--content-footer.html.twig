@@ -21,7 +21,7 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.removeClass('container').addClass(classes) }}>
     {{ content }}
   </div>
 {% endif %}
